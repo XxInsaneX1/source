@@ -287,16 +287,9 @@ local C = Z.Slider({
 	Def = 196.2
 })
 
-local A = D.Button({
-	Text = "Madoxity#0001",
-	Callback = function()
-		print("Madoxity#0001")
-	end,
-	Menu = {
-		Information = function(self)
-			X.Banner({
-				Text = "dont use this"
-			})
+
+
+			
 		end
 	}
 })
@@ -347,7 +340,7 @@ end)
 local A = D.Button({
 	Text = "ommtheshark/tubers93",
 	Callback = function()
-		print("aKinlei#0361")
+		print("ommtheshark/tubers93")
 	end,
 	Menu = {
 		Information = function(self)
