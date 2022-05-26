@@ -1,0 +1,499 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local X = Material.Load({
+	Title = "my toh thing, credits to ommtheshark/tubers93 :)",
+	Style = 3,
+	SizeX = 500,
+	SizeY = 300,
+	Theme = "Light",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(50,50,50)
+	}
+})
+
+local Y = X.New({
+	Title = "Misc"
+})
+
+local Z = X.New({
+	Title = "Sliders"
+})
+
+local G = X.New({
+	Title = "Auto Farm"
+})
+
+local E = X.New({
+	Title = "Version"
+})
+
+local D = X.New({
+	Title = "Credits"
+})
+
+
+local A = Y.Button({
+	Text = "basically antiban lol",
+	Callback = function()
+		local mt = getrawmetatable(game)
+local old = mt.__namecall
+
+setreadonly(mt, false)
+
+mt.__namecall = newcclosure(function(self, ...)
+ local args = {...}
+local method = getnamecallmethod()
+
+ if method == "Kick" then
+     return
+  end
+
+ return old(self, ...)
+end)
+setreadonly(mt, true)
+game:GetService("Players").LocalPlayer.PlayerScripts.LocalScript2:Remove()
+game:GetService("Players").LocalPlayer.PlayerScripts.LocalScript:Remove()
+
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "WHY R U READING THIS I JUST SAID WHAT IT DOES >:("
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+    	Text = "i am unkillable >:)",
+	Callback = function()
+		function f()
+   game.Players.LocalPlayer.Character.KillScript:Destroy()
+end
+hookfunction(f, function()
+   game.Players.LocalPlayer.Character.KillScript:Destroy()
+end)
+
+f()
+
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "ok"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "FREE STUFF OMG",
+	Callback = function()
+		for i, v in pairs (game:GetService("ReplicatedStorage").Gear:GetChildren()) do
+if v:IsA("Tool") then
+poop = v:Clone()
+poop.Parent = game:GetService("Players").LocalPlayer:FindFirstChild("Backpack")
+end
+end
+
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "free sutff les go"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "Inf yeild",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "its infinite yield guyz"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "INF JUMP",
+	Callback = function()
+		-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local INFJUMP = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.Active = true
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.119258665, 0, 0, 0)
+main.Size = UDim2.new(0, 146, 0, 28)
+main.Active = true
+main.Draggable = false
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 146, 0, 28)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Misc"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 17.000
+TextLabel.TextWrapped = true
+
+Frame.Parent = main
+Frame.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 0, 1, 0)
+Frame.Size = UDim2.new(0, 146, 0, 61)
+
+INFJUMP.Name = "INFJUMP"
+INFJUMP.Parent = main
+INFJUMP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INFJUMP.BorderSizePixel = 0
+INFJUMP.Position = UDim2.new(0.794520497, 0, 1.6785717, 0)
+INFJUMP.Size = UDim2.new(0, 21, 0, 21)
+INFJUMP.Font = Enum.Font.SourceSans
+INFJUMP.Text = ""
+INFJUMP.TextColor3 = Color3.fromRGB(0, 0, 0)
+INFJUMP.TextSize = 14.000
+INFJUMP.MouseButton1Down:connect(function()
+local Player = game:GetService'Players'.LocalPlayer;
+local UIS = game:GetService'UserInputService';
+ 
+_G.JumpHeight = 50;
+ 
+function Action(Object, Function) if Object ~= nil then Function(Object); end end
+ 
+UIS.InputBegan:connect(function(UserInput)
+    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+        Action(Player.Character.Humanoid, function(self)
+            if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+                Action(self.Parent.HumanoidRootPart, function(self)
+                    self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+                end)
+            end
+        end)
+    end
+end)
+end)
+
+TextLabel_2.Parent = main
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0547945201, 0, 1.57142854, 0)
+TextLabel_2.Size = UDim2.new(0, 94, 0, 28)
+TextLabel_2.Font = Enum.Font.SciFi
+TextLabel_2.Text = "Inf jump"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 17.000
+TextLabel_2.TextWrapped = true
+
+-- Scripts:
+
+local function TKDWQ_fake_script() -- INFJUMP.LocalScript 
+local script = Instance.new('LocalScript', INFJUMP)
+
+function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+counter = 0
+
+while wait(0.1)do
+script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+ 
+counter = counter + 0.01
+end
+end
+coroutine.wrap(TKDWQ_fake_script)()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "i can jump to space, and nothing can stop me"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "hey peasants ima just tp to the top, dont mind me k?",
+	Callback = function()
+		wait(0.5)
+
+if game.Players.LocalPlayer.Character:FindFirstChild("KillScript") then
+   game.Players.LocalPlayer.Character:FindFirstChild("KillScript"):Destroy()
+end
+
+repeat wait() until not game.Players.LocalPlayer.Character:FindFirstChild("KillScript")
+
+wait(3)
+
+game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Sine), {CFrame = CFrame.new(game:GetService("Workspace").tower.finishes.Finish.Position)}):Play()
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "This will show ur dominace over the other peasants"
+			})
+		end
+	}
+})
+
+local C = Z.Slider({
+	Text = "Walkspeed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+	end,
+	Min = 16,
+	Max = 500,
+	Def = 16
+})
+
+local C = Z.Slider({
+	Text = "broken",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+	end,
+	Min = 50,
+	Max = 500,
+	Def = 50
+})
+
+local C = Z.Slider({
+	Text = "Gravity",
+	Callback = function(Value)
+		game.Workspace.Gravity = (Value)
+	end,
+	Min = 0,
+	Max = 392.4,
+	Def = 196.2
+})
+
+local A = D.Button({
+	Text = "Madoxity#0001",
+	Callback = function()
+		print("Madoxity#0001")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "dont use this"
+			})
+		end
+	}
+})
+
+local A = G.Button({
+	Text = "what ever u do dont click this",
+	Callback = function()
+		while true do wait(60)
+
+if game.Players.LocalPlayer.Character:FindFirstChild("KillScript") then
+   game.Players.LocalPlayer.Character:FindFirstChild("KillScript"):Destroy()
+end
+
+repeat wait() until not game.Players.LocalPlayer.Character:FindFirstChild("KillScript")
+
+wait(3)
+
+game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Sine), {CFrame = CFrame.new(game:GetService("Workspace").tower.finishes.Finish.Position)}):Play()
+	end
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "if u click this, this is the boring button btw"
+			})
+		end
+	}
+})
+
+local A = G.Button({
+	Text = "NO MORE IDLE KICK YAY",
+	Callback = function()
+		local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "this will make roblox stand out of ur way while ur pooping"
+			})
+		end
+	}
+})
+
+local A = D.Button({
+	Text = "ommtheshark/tubers93",
+	Callback = function()
+		print("aKinlei#0361")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "credits to dis super gui"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "gravity flip",
+	Callback = function()
+		getgenv()["cofiG"] = getgenv()["cofiG"] or {}
+local hasToUpdate = true
+local alreadyRan = cofiG.gravityController ~= nil
+
+local http = game:GetService'HttpService'
+local readfile,writefile,fileexists = readfile or syn_io_read,writefile or syn_io_write,isfile or readfile
+
+local rawUrl,baseUrl = "https://ixss.keybase.pub/rblx/gravityController/", "https://keybase.pub/ixss/rblx/gravityController/"
+
+do
+    _G.req = [[
+        local require = function(lol)
+            lol = "https://raw.githubusercontent.com/msva/lua-htmlparser/master/src/"..lol:gsub("%.","/")..".lua";
+            return loadstring(_G.req..game:HttpGet(lol))();
+        end;
+    ]]
+    
+    local require = function(lol)
+        lol = "https://raw.githubusercontent.com/msva/lua-htmlparser/master/src/"..lol:gsub("%.","/")..".lua";
+        return loadstring(_G.req..game:HttpGet(lol))();
+    end;
+    
+    cofiG.htmlparser = cofiG.htmlparser or require"htmlparser"
+end
+
+do  -- check if exists
+if fileexists'gravityController.json' then
+local json = readfile'gravityController.json'
+if json then
+cofiG.gravityController = http:JSONDecode(json)
+hasToUpdate = cofiG.gravityController.Version ~= game:HttpGet(rawUrl.."Version.txt")
+end
+end
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = hasToUpdate and "Updating script..." or "Running script!";
+Font = Enum.Font.Code;
+Color = Color3.fromRGB(255, 60, 60);
+FontSize = Enum.FontSize.Size96;   
+})
+end
+
+ 
+if hasToUpdate then -- update/download
+    
+    function getScripts()
+        local ret = {}
+        local text = game:HttpGet(baseUrl, false)
+        
+        local root = cofiG.htmlparser.parse(text)
+        local files = root:select(".file")
+        
+        for i,v in pairs(files) do
+            if string.sub(v.attributes.href, string.len(v.attributes.href)-3) == ".lua" then
+                local name = string.sub(v.attributes.href,string.len(baseUrl)+1, string.len(v.attributes.href)-4)
+                local script = rawUrl..name..".lua"
+                ret[name] = game:HttpGet(script)
+            elseif string.sub(v.attributes.href, string.len(v.attributes.href)-3) == ".txt" then
+                local name = string.sub(v.attributes.href,string.len(baseUrl)+1, string.len(v.attributes.href)-4)
+                local script = rawUrl..name..".txt"
+                ret[name] = game:HttpGet(script)
+            end
+        end
+        
+        return ret
+    end
+    cofiG.gravityController = getScripts()
+    writefile('gravityController.json', http:JSONEncode(cofiG.gravityController))
+    warn('Script updated!')
+end
+
+local a,b = pcall(loadstring(cofiG.gravityController.Loader))
+
+if not a then
+error('Loader ', b)
+end
+
+if not alreadyRan then
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+Text = game:HttpGet('https://ixss.keybase.pub/Watermark.txt', true)..", originally made by EgoMoose.";
+Font = Enum.Font.Code;
+Color = Color3.fromRGB(244, 0, 175);
+FontSize = Enum.FontSize.Size96;   
+})
+end
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "turn on antiban, den if ur braindead enough to use this script then go ahead"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "i am unkillable, by the lasers and other crap only tho",
+	Callback = function()
+		local killparts = game.workspace.tower:GetDescendants()
+
+for i,v in pairs (killparts) do
+   if v:IsA("BoolValue") or v:IsA("StringValue") then
+       v.Parent:Destroy()
+   end
+   if v:IsA("ManualWeld") then
+       if v.Name == "kills" then
+   v.Parent:Destroy()
+       end
+   end
+   if v:IsA("Part") then
+   v.Anchored = true
+   end
+end
+
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "ok"
+			})
+		end
+	}
+})
+
+local A = E.Button({
+	Text = "Version 4.6",
+	Callback = function()
+		print("dis is up to date")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "im not gonna update this anymore cuz im too lazy"
+			})
+		end
+	}
+})
