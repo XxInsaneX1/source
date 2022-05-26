@@ -287,9 +287,16 @@ local C = Z.Slider({
 	Def = 196.2
 })
 
-
-
-			
+local A = D.Button({
+	Text = "asmr button, idk why i have this in credits",
+	Callback = function()
+		print("enjoy the asmr")
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "dont use this"
+			})
 		end
 	}
 })
