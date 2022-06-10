@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-	Title = "my toh thing, credits to ommtheshark/tubers93 :)",
+	Title = "my toh gui credits to InsaneX :)",
 	Style = 3,
 	SizeX = 500,
 	SizeY = 300,
