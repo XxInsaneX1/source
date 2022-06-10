@@ -1,3 +1,12 @@
+local function notif(str,dur)
+	game:FindService("StarterGui"):SetCore("SendNotification", {
+		Title = "ur mom hub",
+		Text = str,
+		Icon = "",
+		Duration = dur or 3
+	})
+end
+notif('TOH deteced, we are loading the required assests for toh. also btw made by InsaneX',100)
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
@@ -33,7 +42,7 @@ local D = X.New({
 
 
 local A = Y.Button({
-	Text = "basically antiban lol",
+	Text = "Antiban",
 	Callback = function()
 		local mt = getrawmetatable(game)
 local old = mt.__namecall
@@ -65,7 +74,7 @@ game:GetService("Players").LocalPlayer.PlayerScripts.LocalScript:Remove()
 })
 
 local A = Y.Button({
-    	Text = "i am unkillable >:)",
+    	Text = "UNKILLABLE MODE",
 	Callback = function()
 		function f()
    game.Players.LocalPlayer.Character.KillScript:Destroy()
@@ -87,7 +96,7 @@ f()
 })
 
 local A = Y.Button({
-	Text = "FREE STUFF OMG",
+	Text = "free stuff, so u dont have to waste money on it LOL",
 	Callback = function()
 		for i, v in pairs (game:GetService("ReplicatedStorage").Gear:GetChildren()) do
 if v:IsA("Tool") then
@@ -234,7 +243,7 @@ coroutine.wrap(TKDWQ_fake_script)()
 })
 
 local A = Y.Button({
-	Text = "hey peasants ima just tp to the top, dont mind me k?",
+	Text = "tp to the top, and dont be sus pls",
 	Callback = function()
 		wait(0.5)
 
@@ -327,7 +336,7 @@ game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.Humano
 })
 
 local A = G.Button({
-	Text = "NO MORE IDLE KICK YAY",
+	Text = "bye bye idle kick",
 	Callback = function()
 		local VirtualUser=game:service'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -345,7 +354,7 @@ end)
 })
 
 local A = D.Button({
-	Text = "ommtheshark/tubers93",
+	Text = "InsaneX",
 	Callback = function()
 		print("ommtheshark/tubers93")
 	end,
@@ -456,7 +465,7 @@ end
 })
 
 local A = Y.Button({
-	Text = "i am unkillable, by the lasers and other crap only tho",
+	Text = "unkillable mode but except of not being able to die at all, you just cant die to the lazers and stuff",
 	Callback = function()
 		local killparts = game.workspace.tower:GetDescendants()
 
