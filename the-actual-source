@@ -6,7 +6,14 @@ local function notif(str,dur)
 		Duration = dur or 3
 	})
 end
-notif('TOH deteced, we are loading the required assests for toh. also btw made by InsaneX',100)
+notif('Injecting...',3)
+wait(0.2)
+notif('checking whitelist...',0.3)
+wait(0.01)
+notif('scanning',0.1)
+wait(0.01)
+notif('launching...,5')
+wait(5.7)
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
