@@ -3,15 +3,12 @@ local function notif(str,dur)
 		Title = "ur mom hub",
 		Text = str,
 		Icon = "",
-		Duration = dur or 3
+		Duration = dur or 1
 	})
 end
 notif('Injecting...')
-wait(0.5)
 notif('checking whitelist...')
-wait(0.5)
 notif('scanning')
-wait(0.5)
 notif('launching...',5)
 wait(0.5)
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
