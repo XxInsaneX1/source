@@ -10,8 +10,7 @@ notif('Injecting...')
 notif('checking whitelist...')
 notif('scanning')
 notif('launching...',10)
-end)
-wait(50)
+wait(10)
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
