@@ -6,14 +6,14 @@ local function notif(str,dur)
 		Duration = dur or 3
 	})
 end
-notif('Injecting...',3)
+notif('Injecting...')
 wait(13)
-notif('checking whitelist...',1.1)
+notif('checking whitelist...')
 wait(8)
-notif('scanning',3)
+notif('scanning')
 wait(13)
-notif('launching...',5.7)
-wait(15.7)
+notif('launching...',5)
+wait(50)
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
