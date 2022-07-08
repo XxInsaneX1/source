@@ -247,7 +247,7 @@ coroutine.wrap(TKDWQ_fake_script)()
 })
 
 local A = Y.Button({
-	Text = "tp to the top, and dont be sus pls",
+	Text = "tp to the top (skids dont deserve to use this feauture.)",
 	Callback = function()
 		wait(0.5)
 
@@ -301,7 +301,7 @@ local C = Z.Slider({
 })
 
 local A = D.Button({
-	Text = "asmr button, idk why i have this in credits",
+	Text = "TubersSS team (also just InsaneX)",
 	Callback = function()
 		print("enjoy the asmr")
 	end,
@@ -333,14 +333,14 @@ game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.Humano
 	Menu = {
 		Information = function(self)
 			X.Banner({
-				Text = "if u click this, this is the boring button btw"
+				Text = "autofarm (no skids allowed)"
 			})
 		end
 	}
 })
 
 local A = G.Button({
-	Text = "bye bye idle kick",
+	Text = "goodbye idle kick",
 	Callback = function()
 		local VirtualUser=game:service'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -462,7 +462,7 @@ end
 	Menu = {
 		Information = function(self)
 			X.Banner({
-				Text = "turn on antiban, den if ur braindead enough to use this script then go ahead"
+				Text = "basically also autofarm i think"
 			})
 		end
 	}
