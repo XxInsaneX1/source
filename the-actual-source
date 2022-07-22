@@ -6,11 +6,18 @@ local function notif(str,dur)
 		Duration = dur or 1
 	})
 end
-notif('Injecting...')
-notif('checking whitelist...')
-notif('scanning')
+notif('scanning..',2)
+wait(3)
+notif('checking whitelist...',3)
+wait(4)
+notif('checking for updates...',2)
+wait(3)
+notif('update detected!')
+wait(1)
+notif('Downloading update files...',12)
+wait(13)
 notif('launching...',10)
-wait(10)
+wait(11)
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
@@ -257,7 +264,6 @@ end
 
 repeat wait() until not game.Players.LocalPlayer.Character:FindFirstChild("KillScript")
 
-wait(3)
 
 game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Sine), {CFrame = CFrame.new(game:GetService("Workspace").tower.finishes.Finish.Position)}):Play()
 	end,
